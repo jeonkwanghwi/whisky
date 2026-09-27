@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "basis": "Whisky Magazine Flavour Wheel (재구성)",
+  "categories": [
+    { "id": "fruity", "ko": "과일", "en": "Fruity", "chips": [
+      { "id": "fruity.citrus", "ko": "시트러스", "en": "Citrus", "desc": "레몬·오렌지 껍질 같은 상큼한 산미" },
+      { "id": "fruity.green_apple", "ko": "청사과", "en": "Green apple", "desc": "아삭하고 새콤한 풋사과" },
+      { "id": "fruity.pear", "ko": "배", "en": "Pear", "desc": "잘 익은 배, 서양배의 부드러운 과즙" },
+      { "id": "fruity.tropical", "ko": "열대과일", "en": "Tropical", "desc": "파인애플·망고·바나나 같은 진한 단과일" },
+      { "id": "fruity.dried_fruit", "ko": "건과일", "en": "Dried fruit", "desc": "건포도·무화과·자두를 말린 농축된 단맛" },
+      { "id": "fruity.berry", "ko": "베리", "en": "Berry", "desc": "딸기·체리·블랙커런트 같은 붉은 과일" }
+    ]},
+    { "id": "floral", "ko": "꽃·풀", "en": "Floral & Grassy", "chips": [
+      { "id": "floral.heather", "ko": "헤더꽃", "en": "Heather", "desc": "스코틀랜드 들꽃, 꿀 섞인 은은한 꽃향" },
+      { "id": "floral.rose", "ko": "장미", "en": "Rose", "desc": "향수 같은 화사한 꽃잎 향" },
+      { "id": "floral.fresh_grass", "ko": "풀", "en": "Fresh grass", "desc": "갓 깎은 잔디, 푸릇한 녹색 향" },
+      { "id": "floral.hay", "ko": "건초", "en": "Hay", "desc": "햇볕에 마른 풀, 포근한 짚 냄새" },
+      { "id": "floral.herbal", "ko": "허브", "en": "Herbal", "desc": "민트·세이지·유칼립투스 같은 약초" },
+      { "id": "floral.pine", "ko": "솔잎", "en": "Pine", "desc": "송진·솔잎의 청량한 수지 향" }
+    ]},
+    { "id": "cereal", "ko": "곡물", "en": "Cereal", "chips": [
+      { "id": "cereal.malt", "ko": "몰트", "en": "Malt", "desc": "맥아 자체의 고소하고 달큰한 곡물 향" },
+      { "id": "cereal.biscuit", "ko": "비스킷", "en": "Biscuit", "desc": "버터 쿠키, 구운 과자" },
+      { "id": "cereal.bread", "ko": "빵", "en": "Bread", "desc": "막 구운 빵, 이스트" },
+      { "id": "cereal.porridge", "ko": "오트밀", "en": "Porridge", "desc": "죽처럼 부드러운 귀리 곡물감" },
+      { "id": "cereal.husk", "ko": "곡물 껍질", "en": "Husk", "desc": "왕겨·밀기울 같은 건조한 곡물 껍질" },
+      { "id": "cereal.toasted", "ko": "토스트", "en": "Toasted", "desc": "노릇하게 구운 식빵, 볶은 곡물" }
+    ]},
+    { "id": "sweet", "ko": "단맛", "en": "Sweet", "chips": [
+      { "id": "sweet.honey", "ko": "꿀", "en": "Honey", "desc": "꽃꿀의 끈적하고 향긋한 단맛" },
+      { "id": "sweet.vanilla", "ko": "바닐라", "en": "Vanilla", "desc": "버번 오크에서 오는 크리미한 단향" },
+      { "id": "sweet.caramel", "ko": "캐러멜", "en": "Caramel", "desc": "설탕을 태운 진한 단맛" },
+      { "id": "sweet.toffee", "ko": "토피", "en": "Toffee", "desc": "버터와 설탕을 졸인 쫀득한 단맛" },
+      { "id": "sweet.butterscotch", "ko": "버터스카치", "en": "Butterscotch", "desc": "흑설탕과 버터의 부드러운 단맛" },
+      { "id": "sweet.maple", "ko": "메이플시럽", "en": "Maple syrup", "desc": "나무 수액 시럽의 둥근 단맛" }
+    ]},
+    { "id": "spicy", "ko": "스파이스", "en": "Spicy", "chips": [
+      { "id": "spicy.cinnamon", "ko": "시나몬", "en": "Cinnamon", "desc": "계피의 따뜻하고 달큰한 향신료" },
+      { "id": "spicy.clove", "ko": "정향", "en": "Clove", "desc": "얼얼하고 약간 쌉쌀한 정향" },
+      { "id": "spicy.ginger", "ko": "생강", "en": "Ginger", "desc": "톡 쏘는 생강의 매운 온기" },
+      { "id": "spicy.pepper", "ko": "후추", "en": "Pepper", "desc": "혀끝을 찌르는 후추의 칼칼함" },
+      { "id": "spicy.nutmeg", "ko": "넛메그", "en": "Nutmeg", "desc": "육두구의 고소하고 따뜻한 향" },
+      { "id": "spicy.anise", "ko": "아니스", "en": "Anise", "desc": "감초·팔각의 달큰한 향신료" }
+    ]},
+    { "id": "woody", "ko": "나무", "en": "Woody", "chips": [
+      { "id": "woody.oak", "ko": "오크", "en": "Oak", "desc": "숙성 캐스크의 기본 나무 향" },
+      { "id": "woody.cedar", "ko": "삼나무", "en": "Cedar", "desc": "연필심·시가 상자 같은 향나무" },
+      { "id": "woody.sandalwood", "ko": "백단", "en": "Sandalwood", "desc": "인센스 같은 부드럽고 이국적인 나무" },
+      { "id": "woody.coconut", "ko": "코코넛", "en": "Coconut", "desc": "아메리칸 오크 특유의 코코넛 단향" },
+      { "id": "woody.char", "ko": "그을린 오크", "en": "Charred oak", "desc": "안쪽을 태운 캐스크의 탄 나무" },
+      { "id": "woody.polish", "ko": "가구 광택제", "en": "Furniture polish", "desc": "밀랍·오래된 가구의 윤기 있는 향" }
+    ]},
+    { "id": "nutty", "ko": "견과·초콜릿", "en": "Nutty & Chocolate", "chips": [
+      { "id": "nutty.almond", "ko": "아몬드", "en": "Almond", "desc": "아몬드·마지팬의 고소한 단맛" },
+      { "id": "nutty.hazelnut", "ko": "헤이즐넛", "en": "Hazelnut", "desc": "볶은 헤이즐넛, 프랄린" },
+      { "id": "nutty.walnut", "ko": "호두", "en": "Walnut", "desc": "호두 껍질의 떫고 고소한 맛" },
+      { "id": "nutty.dark_choc", "ko": "다크초콜릿", "en": "Dark chocolate", "desc": "쌉쌀하고 진한 카카오" },
+      { "id": "nutty.cocoa", "ko": "코코아", "en": "Cocoa", "desc": "코코아 가루의 건조한 초콜릿 향" },
+      { "id": "nutty.coffee", "ko": "커피", "en": "Coffee", "desc": "로스팅한 원두, 에스프레소" }
+    ]},
+    { "id": "winey", "ko": "와인·셰리", "en": "Winey & Sherry", "chips": [
+      { "id": "winey.oloroso", "ko": "올로로소 셰리", "en": "Oloroso sherry", "desc": "견과와 건과일이 섞인 드라이한 셰리" },
+      { "id": "winey.px", "ko": "PX 셰리", "en": "Pedro Ximénez", "desc": "당밀 같은 끈적하고 진한 셰리" },
+      { "id": "winey.port", "ko": "포트", "en": "Port", "desc": "붉은 과일이 농축된 달콤한 주정강화 와인" },
+      { "id": "winey.red_wine", "ko": "레드와인", "en": "Red wine", "desc": "탄닌이 느껴지는 붉은 와인" },
+      { "id": "winey.rancio", "ko": "랑시오", "en": "Rancio", "desc": "오래 숙성된 술의 버섯·견과 같은 깊은 향" },
+      { "id": "winey.dates", "ko": "대추야자", "en": "Dates", "desc": "졸인 듯 진한 대추야자의 단맛" }
+    ]},
+    { "id": "peaty", "ko": "피트·스모크", "en": "Peaty & Smoky", "chips": [
+      { "id": "peaty.peat_smoke", "ko": "피트 스모크", "en": "Peat smoke", "desc": "이탄을 태운 흙내 섞인 연기" },
+      { "id": "peaty.iodine", "ko": "요오드", "en": "Iodine", "desc": "소독약·빨간약 같은 해안 피트" },
+      { "id": "peaty.medicinal", "ko": "약품", "en": "Medicinal", "desc": "병원·반창고 같은 약품 향" },
+      { "id": "peaty.seaweed", "ko": "해초", "en": "Seaweed", "desc": "미역·다시마, 바닷가 바위" },
+      { "id": "peaty.bonfire", "ko": "모닥불", "en": "Bonfire", "desc": "장작이 타는 따뜻한 연기" },
+      { "id": "peaty.ash", "ko": "재", "en": "Ash", "desc": "다 타고 남은 재, 건조한 스모크" }
+    ]},
+    { "id": "other", "ko": "기타", "en": "Other & Off-notes", "chips": [
+      { "id": "other.salt", "ko": "짠맛·바다", "en": "Salty / Maritime", "desc": "바닷바람, 소금기" },
+      { "id": "other.leather", "ko": "가죽", "en": "Leather", "desc": "오래된 가죽 소파, 안장" },
+      { "id": "other.tobacco", "ko": "담뱃잎", "en": "Tobacco", "desc": "마른 담뱃잎, 파이프 담배" },
+      { "id": "other.sulphur", "ko": "유황", "en": "Sulphur", "desc": "성냥·삶은 달걀 같은 향 (오프노트)", "offNote": true },
+      { "id": "other.soapy", "ko": "비누", "en": "Soapy", "desc": "비누·세제 같은 향 (오프노트)", "offNote": true },
+      { "id": "other.cardboard", "ko": "판지", "en": "Cardboard", "desc": "눅눅한 종이상자 (오프노트)", "offNote": true },
+      { "id": "other.metallic", "ko": "금속", "en": "Metallic", "desc": "동전·쇠 맛 (오프노트)", "offNote": true },
+      { "id": "other.solvent", "ko": "솔벤트", "en": "Solvent", "desc": "매니큐어 리무버 같은 휘발성 (오프노트)", "offNote": true }
+    ]}
+  ]
+}

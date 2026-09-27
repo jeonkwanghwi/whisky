@@ -1,0 +1,388 @@
+{
+ "note": "내장 샘플 프로필. 목록에 없는 위스키는 기본 휠로 평가한다.",
+ "profiles": [
+  {
+   "key": "glenfiddich 12",
+   "name": "Glenfiddich 12",
+   "ko": "글렌피딕 12년",
+   "nose": [
+    "fruity.pear",
+    "fruity.green_apple",
+    "floral.fresh_grass",
+    "sweet.honey",
+    "woody.oak"
+   ],
+   "palate": [
+    "sweet.butterscotch",
+    "sweet.vanilla",
+    "fruity.pear",
+    "cereal.malt",
+    "woody.oak"
+   ],
+   "finish": [
+    "woody.oak",
+    "nutty.almond",
+    "sweet.honey",
+    "spicy.ginger"
+   ],
+   "body": 2,
+   "sweet": 3,
+   "smoky": 1
+  },
+  {
+   "key": "macallan 12 sherry oak",
+   "name": "The Macallan 12 Sherry Oak",
+   "ko": "맥캘란 12년 셰리 오크",
+   "nose": [
+    "winey.oloroso",
+    "fruity.dried_fruit",
+    "sweet.vanilla",
+    "spicy.cinnamon",
+    "woody.oak"
+   ],
+   "palate": [
+    "winey.oloroso",
+    "fruity.dried_fruit",
+    "spicy.nutmeg",
+    "sweet.toffee",
+    "nutty.dark_choc"
+   ],
+   "finish": [
+    "winey.oloroso",
+    "spicy.clove",
+    "woody.oak",
+    "nutty.walnut"
+   ],
+   "body": 4,
+   "sweet": 4,
+   "smoky": 1
+  },
+  {
+   "key": "lagavulin 16",
+   "name": "Lagavulin 16",
+   "ko": "라가불린 16년",
+   "nose": [
+    "peaty.peat_smoke",
+    "peaty.iodine",
+    "peaty.seaweed",
+    "winey.oloroso",
+    "sweet.vanilla"
+   ],
+   "palate": [
+    "peaty.bonfire",
+    "winey.oloroso",
+    "fruity.dried_fruit",
+    "other.salt",
+    "sweet.caramel"
+   ],
+   "finish": [
+    "peaty.peat_smoke",
+    "peaty.ash",
+    "spicy.pepper",
+    "other.salt"
+   ],
+   "body": 5,
+   "sweet": 3,
+   "smoky": 5
+  },
+  {
+   "key": "laphroaig 10",
+   "name": "Laphroaig 10",
+   "ko": "라프로익 10년",
+   "nose": [
+    "peaty.medicinal",
+    "peaty.iodine",
+    "peaty.peat_smoke",
+    "peaty.seaweed",
+    "sweet.vanilla"
+   ],
+   "palate": [
+    "peaty.bonfire",
+    "other.salt",
+    "sweet.vanilla",
+    "woody.oak",
+    "spicy.pepper"
+   ],
+   "finish": [
+    "peaty.ash",
+    "peaty.medicinal",
+    "spicy.pepper",
+    "woody.char"
+   ],
+   "body": 4,
+   "sweet": 2,
+   "smoky": 5
+  },
+  {
+   "key": "glenlivet 12",
+   "name": "The Glenlivet 12",
+   "ko": "글렌리벳 12년",
+   "nose": [
+    "fruity.tropical",
+    "floral.heather",
+    "fruity.green_apple",
+    "sweet.honey",
+    "fruity.citrus"
+   ],
+   "palate": [
+    "sweet.vanilla",
+    "fruity.pear",
+    "sweet.honey",
+    "floral.heather",
+    "nutty.almond"
+   ],
+   "finish": [
+    "nutty.almond",
+    "woody.oak",
+    "spicy.ginger",
+    "sweet.caramel"
+   ],
+   "body": 2,
+   "sweet": 3,
+   "smoky": 1
+  },
+  {
+   "key": "talisker 10",
+   "name": "Talisker 10",
+   "ko": "탈리스커 10년",
+   "nose": [
+    "peaty.peat_smoke",
+    "other.salt",
+    "fruity.citrus",
+    "peaty.seaweed",
+    "sweet.honey"
+   ],
+   "palate": [
+    "spicy.pepper",
+    "peaty.bonfire",
+    "fruity.dried_fruit",
+    "cereal.malt",
+    "other.salt"
+   ],
+   "finish": [
+    "spicy.pepper",
+    "peaty.peat_smoke",
+    "other.salt",
+    "woody.oak"
+   ],
+   "body": 4,
+   "sweet": 2,
+   "smoky": 4
+  },
+  {
+   "key": "ardbeg 10",
+   "name": "Ardbeg 10",
+   "ko": "아드벡 10년",
+   "nose": [
+    "peaty.peat_smoke",
+    "fruity.citrus",
+    "peaty.ash",
+    "peaty.medicinal",
+    "sweet.vanilla"
+   ],
+   "palate": [
+    "peaty.bonfire",
+    "sweet.vanilla",
+    "spicy.cinnamon",
+    "nutty.dark_choc",
+    "fruity.citrus"
+   ],
+   "finish": [
+    "peaty.peat_smoke",
+    "peaty.ash",
+    "nutty.coffee",
+    "spicy.pepper",
+    "woody.char"
+   ],
+   "body": 4,
+   "sweet": 3,
+   "smoky": 5
+  },
+  {
+   "key": "glenmorangie original",
+   "name": "Glenmorangie The Original",
+   "ko": "글렌모렌지 오리지널",
+   "nose": [
+    "fruity.citrus",
+    "fruity.tropical",
+    "sweet.vanilla",
+    "floral.rose",
+    "fruity.pear"
+   ],
+   "palate": [
+    "sweet.vanilla",
+    "sweet.honey",
+    "fruity.citrus",
+    "spicy.nutmeg",
+    "woody.oak"
+   ],
+   "finish": [
+    "fruity.citrus",
+    "woody.oak",
+    "sweet.vanilla",
+    "nutty.almond"
+   ],
+   "body": 2,
+   "sweet": 4,
+   "smoky": 1
+  },
+  {
+   "key": "balvenie 12 doublewood",
+   "name": "The Balvenie 12 DoubleWood",
+   "ko": "발베니 12년 더블우드",
+   "nose": [
+    "sweet.honey",
+    "sweet.vanilla",
+    "winey.oloroso",
+    "fruity.dried_fruit",
+    "woody.oak"
+   ],
+   "palate": [
+    "sweet.honey",
+    "spicy.cinnamon",
+    "nutty.almond",
+    "winey.oloroso",
+    "sweet.caramel"
+   ],
+   "finish": [
+    "spicy.cinnamon",
+    "woody.oak",
+    "sweet.vanilla",
+    "winey.oloroso"
+   ],
+   "body": 3,
+   "sweet": 4,
+   "smoky": 1
+  },
+  {
+   "key": "highland park 12",
+   "name": "Highland Park 12 Viking Honour",
+   "ko": "하이랜드 파크 12년",
+   "nose": [
+    "sweet.honey",
+    "floral.heather",
+    "peaty.peat_smoke",
+    "fruity.citrus",
+    "woody.oak"
+   ],
+   "palate": [
+    "sweet.honey",
+    "floral.heather",
+    "winey.oloroso",
+    "peaty.bonfire",
+    "spicy.nutmeg"
+   ],
+   "finish": [
+    "peaty.peat_smoke",
+    "woody.oak",
+    "sweet.honey",
+    "spicy.pepper"
+   ],
+   "body": 3,
+   "sweet": 3,
+   "smoky": 3
+  }
+ ],
+ "popular": [
+  [
+   "Glenfiddich 12",
+   "글렌피딕 12년"
+  ],
+  [
+   "The Macallan 12 Sherry Oak",
+   "맥캘란 12년 셰리 오크"
+  ],
+  [
+   "Lagavulin 16",
+   "라가불린 16년"
+  ],
+  [
+   "Laphroaig 10",
+   "라프로익 10년"
+  ],
+  [
+   "The Glenlivet 12",
+   "글렌리벳 12년"
+  ],
+  [
+   "Talisker 10",
+   "탈리스커 10년"
+  ],
+  [
+   "Ardbeg 10",
+   "아드벡 10년"
+  ],
+  [
+   "Glenmorangie The Original",
+   "글렌모렌지 오리지널"
+  ],
+  [
+   "The Balvenie 12 DoubleWood",
+   "발베니 12년 더블우드"
+  ],
+  [
+   "Highland Park 12 Viking Honour",
+   "하이랜드 파크 12년"
+  ],
+  [
+   "Yamazaki 12",
+   "야마자키 12년"
+  ],
+  [
+   "Hibiki Japanese Harmony",
+   "히비키 하모니"
+  ],
+  [
+   "Glenfarclas 15",
+   "글렌파클라스 15년"
+  ],
+  [
+   "Bowmore 12",
+   "보모어 12년"
+  ],
+  [
+   "Oban 14",
+   "오반 14년"
+  ],
+  [
+   "Springbank 10",
+   "스프링뱅크 10년"
+  ],
+  [
+   "Aberlour A'bunadh",
+   "아벨라워 아부나흐"
+  ],
+  [
+   "GlenDronach 12",
+   "글렌드로낙 12년"
+  ],
+  [
+   "The Dalmore 12",
+   "달모어 12년"
+  ],
+  [
+   "Bunnahabhain 12",
+   "부나하벤 12년"
+  ],
+  [
+   "Caol Ila 12",
+   "쿨일라 12년"
+  ],
+  [
+   "Kavalan Classic",
+   "카발란 클래식"
+  ],
+  [
+   "Nikka From the Barrel",
+   "닛카 프롬 더 배럴"
+  ],
+  [
+   "Monkey Shoulder",
+   "몽키숄더"
+  ],
+  [
+   "Johnnie Walker Black Label",
+   "조니워커 블랙"
+  ]
+ ]
+}
