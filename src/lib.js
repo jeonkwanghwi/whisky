@@ -6,8 +6,17 @@ export { taxonomy, profiles };
 export const chipMap = {}, chipCat = {}, catMap = {};
 taxonomy.categories.forEach(c => { catMap[c.id] = c; c.chips.forEach(ch => { chipMap[ch.id] = ch; chipCat[ch.id] = c.id; }); });
 
-export const TABS = [{ k: 'nose', ko: '향', en: 'NOSE' }, { k: 'palate', ko: '맛', en: 'PALATE' }, { k: 'finish', ko: '피니쉬', en: 'FINISH' }, { k: 'overall', ko: '총평' }];
-export const SEGS = { nose: [], palate: [['body', '바디', '가벼움', '묵직함'], ['sweet', '단맛', '드라이', '달콤'], ['smoky', '스모키', '없음', '강함'], ['burn', '알코올 자극', '부드러움', '화끈']], finish: [['length', '여운 길이', '짧음', '긺']], overall: [] };
+
+export const TABS =[{ k: 'nose', ko: '향', en: 'NOSE' }, { k: 'palate', ko: '맛', en: 'PALATE' }, { k: 'finish', ko: '피니쉬', en: 'FINISH' }, { k: 'info', ko: '정보' }, { k: 'overall', ko: '총평' }];
+export const STAGES = TABS.slice(0, 3);
+export const SEGS = { nose: [], palate: [['body', '바디', '가벼움', '묵직함'], ['sweet', '단맛', '드라이', '달콤'], ['smoky', '스모키', '없음', '강함'], ['burn', '알코올 자극', '부드러움', '화끈']], finish: [['length', '여운 길이', '짧음', '긺']] };
+// 정보 탭 항목: Whiskybase 병 상세(병입자·캐스크·도수·병입일)와 스카치 라벨 표기 기준.
+export const REGIONS = [['speyside', '스페이사이드'], ['highland', '하이랜드'], ['lowland', '로우랜드'], ['islay', '아일라'], ['islands', '아일랜즈'], ['campbeltown', '캠벨타운'], ['ireland', '아일랜드'], ['usa', '미국'], ['japan', '일본'], ['other', '기타']];
+export const TYPES = [['single_malt', '싱글 몰트'], ['blended_malt', '블렌디드 몰트'], ['blended', '블렌디드'], ['single_grain', '싱글 그레인'], ['bourbon', '버번'], ['rye', '라이'], ['other', '기타']];
+export const CASKS = [['bourbon', '버번'], ['oloroso', '올로로소 셰리'], ['px', 'PX 셰리'], ['port', '포트'], ['wine', '와인'], ['rum', '럼'], ['virgin', '버진 오크'], ['mizunara', '미즈나라']];
+export const BOTTLERS = [['ob', '오피셜(OB)'], ['ib', '독립병입(IB)']];
+export const FLAGS = [['cs', '캐스크 스트렝스'], ['sc', '싱글 캐스크'], ['ncf', '논칠필터링'], ['nc', '무색소']];
+export const label = (list, id) => (list.find(x => x[0] === id) || [])[1];
 export const RADAR = [['body', '바디'], ['sweet', '단맛'], ['fruity', '과일'], ['spicy', '스파이스'], ['woody', '나무'], ['winey', '셰리'], ['smoky', '스모키']];
 export const SERVES = [['neat', '니트'], ['water', '가수'], ['rocks', '온더락'], ['highball', '하이볼']];
 export const REBUY = [['yes', '예'], ['maybe', '글쎄'], ['no', '아니오']];
@@ -24,12 +33,13 @@ function findBuiltin(name) {
   return profiles.profiles.find(p => p.key === n || norm(p.name) === n || norm(p.ko) === n || n.startsWith(p.key) || (n.length >= 8 && (p.key.startsWith(n) || norm(p.ko).startsWith(n))));
 }
 
-// 내장 목록에 있으면 그 프로필을 추천 칩으로 쓰고, 없으면 null(기본 휠).
+// 내장 목록에 있으면 그 프로필을 추천 칩으로, 그 정보를 정보 탭 기본값으로 쓴다. 없으면 기본 휠.
 export function blank(name) {
   const t = Date.now(), p = findBuiltin(name);
   return {
     id: uid(), createdAt: t, updatedAt: t, status: 'draft', name, nameKey: norm(name),
     profile: p ? { nose: p.nose, palate: p.palate, finish: p.finish, body: p.body, sweet: p.sweet, smoky: p.smoky } : null,
+    info: p ? structuredClone(p.info) : {},
     ratings: { nose: {}, palate: {}, finish: {} }, scores: {}, price: null, structure: {}, overall: {}, memo: '', place: ''
   };
 }

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { toBlob } from 'html-to-image';
-import { TABS, REBUY_CARD, topChips, radarData, fmtDate, fmtPrice, serveLabel } from '../lib.js';
+import { STAGES, REBUY_CARD, REGIONS, CASKS, label, topChips, radarData, fmtDate, fmtPrice, serveLabel } from '../lib.js';
 import { W, finalScore } from '../score.js';
 
 // html-to-image는 기본으로 한글 폰트 서브셋 200여 개를 전부 받아 넣어 수십 초가 걸린다.
@@ -53,7 +53,8 @@ export default function Card({ note: n, flash, onBack, onEdit, onDelete }) {
   const fin = finalScore(n.scores), full = Math.round(fin || 0), sc = n.scores || {};
   const pills = [serveLabel(n.overall.serve), REBUY_CARD[n.overall.rebuy], fmtPrice(n.price)].filter(Boolean);
   const radar = radarData(n), radarSize = tall ? 620 : 470;
-  const memo = (n.memo || '').trim();
+  const memo = (n.memo || '').trim(), info = n.info || {};
+  const infoLine = [label(REGIONS, info.region), info.age && `${info.age}년`, info.abv && `${info.abv}%`, (info.casks || []).map(c => label(CASKS, c)).join('·')].filter(Boolean).join(' · ');
 
   return (<>
     <header style={{ padding: '8px 8px 4px', display: 'flex', alignItems: 'center', gap: 4 }}>
@@ -67,6 +68,7 @@ export default function Card({ note: n, flash, onBack, onEdit, onDelete }) {
           <div className="col" style={{ gap: 22 }}>
             <div className="top"><span style={{ letterSpacing: 8, color: '#F2C06B' }}>TASTING NOTE</span><span style={{ color: '#A8927A' }}>{fmtDate(n.createdAt)}</span></div>
             <div className="name">{n.name}</div>
+            {infoLine && <div style={{ fontSize: 28, color: '#A8927A', marginTop: -8 }}>{infoLine}</div>}
             <div style={{ display: 'flex', alignItems: 'center', gap: 24, flexWrap: 'wrap', color: '#F2C06B' }}>
               <span style={{ fontSize: 56, letterSpacing: 4, lineHeight: 1 }}>{'★'.repeat(full) + '☆'.repeat(5 - full)}</span>
               <span style={{ fontSize: 44, fontWeight: 700 }}>{fin ? fin.toFixed(1) : '미완성'}</span>
@@ -89,7 +91,7 @@ export default function Card({ note: n, flash, onBack, onEdit, onDelete }) {
             </div>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,minmax(0,1fr))', gap: 32 }}>
-            {TABS.slice(0, 3).map(t => (
+            {STAGES.map(t => (
               <div key={t.k} className="col">
                 <div className="stage-h"><span style={{ fontSize: 22, letterSpacing: 5, color: '#F2C06B' }}>{t.en}</span><span style={{ fontSize: 20, color: '#A8927A' }}>{Math.round(W[t.k] * 100)}% · {sc[t.k] ? sc[t.k].toFixed(1) : '–'}</span></div>
                 {topChips(n.ratings[t.k], tall ? 7 : 5).map(c => <span key={c.ko} className="c"><span>{c.ko}</span><span>{c.dots}</span></span>)}
@@ -106,7 +108,7 @@ export default function Card({ note: n, flash, onBack, onEdit, onDelete }) {
       </div>
       <button className="ghost" style={{ alignSelf: 'center' }} onClick={() => { if (confirm(`'${n.name}' 노트를 삭제할까요?`)) onDelete(); }}>노트 삭제</button>
     </main>
-    <div className="bottom" style={{ padding: '12px 16px calc(16px + env(safe-area-inset-bottom))' }}>
+    <div className="bottom">
       <button className="primary" style={{ opacity: busy ? 0.6 : 1 }} onClick={share}>{busy ? '이미지 만드는 중…' : '이미지로 공유'}</button>
     </div>
   </>);

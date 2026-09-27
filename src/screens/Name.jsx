@@ -1,15 +1,11 @@
 import { useState } from 'react';
-import { profiles, norm } from '../lib.js';
+import { norm } from '../lib.js';
 
 export default function Name({ notes, onStart, onBack }) {
   const [query, setQuery] = useState('');
   const q = norm(query);
-  const match = (a, b) => !q || norm(a).includes(q) || norm(b).includes(q);
-  const recent = [...new Set([...notes].sort((a, b) => b.createdAt - a.createdAt).map(x => x.name))];
-  const groups = [
-    { title: '최근 기록', items: recent.filter(x => match(x)).slice(0, q ? 4 : 5).map(x => [x, '최근']) },
-    { title: q ? '인기 목록' : '인기 싱글몰트', items: profiles.popular.filter(([en, ko]) => !recent.includes(en) && match(en, ko)).slice(0, q ? 6 : 8) }
-  ].filter(g => g.items.length);
+  const recent = [...new Set([...notes].sort((a, b) => b.createdAt - a.createdAt).map(x => x.name))]
+    .filter(x => !q || norm(x).includes(q)).slice(0, q ? 4 : 5);
 
   return (<>
     <header style={{ padding: '12px 8px' }}><button className="icon-btn" aria-label="뒤로" onClick={onBack}>←</button></header>
@@ -18,14 +14,10 @@ export default function Name({ notes, onStart, onBack }) {
       <input className="name-input" autoFocus value={query} onChange={e => setQuery(e.target.value)}
         onKeyDown={e => { if (e.key === 'Enter' && !e.nativeEvent.isComposing) onStart(query); }}
         placeholder="예: 라가불린 16, Talisker 10" autoComplete="off" enterKeyHint="go" />
-      <div className="col" style={{ gap: 0 }}>
-        {groups.map(g => (<div key={g.title} className="col" style={{ gap: 0 }}>
-          <div className="sg-title">{g.title}</div>
-          {g.items.map(([name, sub]) => (
-            <button key={name} className="sg" onClick={() => onStart(name)}><span>{name}</span><span className="muted small">{sub}</span></button>
-          ))}
-        </div>))}
-      </div>
+      {recent.length > 0 && <div className="col" style={{ gap: 0 }}>
+        <div className="sg-title">최근 기록</div>
+        {recent.map(name => <button key={name} className="sg" onClick={() => onStart(name)}><span>{name}</span><span className="muted small">최근</span></button>)}
+      </div>}
     </main>
     <div className="bottom" style={{ borderTop: 0 }}><button className="primary" disabled={!query.trim()} onClick={() => onStart(query)}>평가 시작</button></div>
   </>);
