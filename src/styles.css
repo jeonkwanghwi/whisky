@@ -142,7 +142,7 @@ textarea.field{height:auto;line-height:1.5;padding:12px 14px;resize:vertical}
 @keyframes splash-dive{from{transform:scale(1);filter:blur(0)}to{transform:scale(1.9);filter:blur(8px)}}
 @keyframes splash-fade{0%,35%{opacity:1}100%{opacity:0}}
 /* 스플래시 사인: 왼쪽부터 써지듯 드러나고(부드러운 경계의 마스크 이동), 나갈 때는 그림보다 먼저 사라진다. */
-.splash-sign{position:absolute;left:50%;top:calc(env(safe-area-inset-top) + 4dvh);translate:-50% 0;width:min(72vw,340px);height:auto;pointer-events:none;
+.splash-sign{position:absolute;right:20px;bottom:calc(env(safe-area-inset-bottom) + var(--bottom-gap));width:min(38vw,170px);height:auto;pointer-events:none;
   -webkit-mask-image:linear-gradient(90deg,#000 45%,transparent 55%);mask-image:linear-gradient(90deg,#000 45%,transparent 55%);
   -webkit-mask-size:300% 100%;mask-size:300% 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
   animation:sign-write 1400ms 250ms cubic-bezier(.4,0,.2,1) both}
